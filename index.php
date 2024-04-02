@@ -12,26 +12,26 @@ require 'db.php';
     <title>PHP-OOP-1</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-dark">
 
-    <div class="container mt-5">
-        <div class="row p-5">
-            <ul>
-
+    <div class="container p-5">
+        <h1 class="text-center text-white w-100">MOVIES</h1>
+        <div class="row justify-content-center mt-4">
                 <?php 
                 foreach($movies as $movie) {
                     echo "
-                    <li>
-                        <p>" . $movie->title . "</p> 
-                        <p>" . $movie->releaseDate . "</p> 
-                        <p>" . $movie->overview . "</p> 
-                        <p>" . $movie->getLanguage() . "</p>
-                        <p>" . $movie->director->getDirector() . "</p>
-                    </li>";
+                    <div class='card p-4'>
+                        <h4>TITOLO: " . $movie->title . "</h4> 
+                        <p><strong>ANNO: </strong>" . $movie->releaseDate . "</p> 
+                        <p><strong>PLOT: </strong>" . $movie->overview . "</p> 
+                        <p><strong>LINGUA ORIGINALE: </strong>" . $movie->getLanguage() . "</p>
+                        <p><strong>GENERI: </strong>" . $movie->getGenres() . "</p>
+                        <p><strong>REGIA: </strong>" . $movie->director->getDirector() . "</p>
+                    </div>";
                 }
-                ?>
-            </ul>         
+                ?>       
         </div>
     </div>
     
