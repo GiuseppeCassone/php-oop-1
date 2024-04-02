@@ -1,3 +1,9 @@
+<?php 
+
+require 'db.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -9,6 +15,21 @@
 </head>
 <body>
 
+    <div class="container">
+        <div class="row">
+            <ul>
+
+                <?php 
+                foreach($movies as $movie) {
+                    echo "
+                    <li>
+                        " . $movie->title . ", " . $movie->releaseDate . ", " . $movie->overview . ", " . $movie->originalLanguage . "
+                    </li>";
+                }
+                ?>
+            </ul>         
+        </div>
+    </div>
     
 
 
