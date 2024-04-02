@@ -15,15 +15,18 @@ require 'db.php';
 </head>
 <body>
 
-    <div class="container">
-        <div class="row">
+    <div class="container mt-5">
+        <div class="row p-5">
             <ul>
 
                 <?php 
                 foreach($movies as $movie) {
                     echo "
                     <li>
-                        " . $movie->title . ", " . $movie->releaseDate . ", " . $movie->overview . ", " . $movie->originalLanguage . "
+                        <p>" . $movie->title . "</p> 
+                        <p>" . $movie->releaseDate . "</p> 
+                        <p>" . $movie->overview . "</p> 
+                        <p>" . $movie->getLanguage() . "</p>
                     </li>";
                 }
                 ?>

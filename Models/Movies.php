@@ -18,6 +18,10 @@ class Movies {
         $this->originalLanguage = $_originalLanguage;
     }
 
+    public function getLanguage() {
+        return $this->originalLanguage;
+    }
+
     
     
 }
