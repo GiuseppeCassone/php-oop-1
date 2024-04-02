@@ -6,6 +6,7 @@ class Movies {
     public $releaseDate;
     public $overview;
     public $originalLanguage;
+    public $posterUrl;
     public $genre = [];
     public $director;
 
@@ -20,13 +21,14 @@ class Movies {
      * @param  string $_originalLanguage
      * @param  string $_genre
      */
-    function __construct($_title, $_releaseDate, $_overview, $_originalLanguage, $_genre = []) {
+    function __construct($_title, $_releaseDate, $_overview, $_originalLanguage, $_posterUrl, $_genre = []) {
 
         // attributi della classe Movies
         $this->title = $_title;
         $this->releaseDate = $_releaseDate;
         $this->overview = $_overview;
         $this->originalLanguage = $_originalLanguage;
+        $this->posterUrl = $_posterUrl;
         $this->genre = $_genre;
     }
 

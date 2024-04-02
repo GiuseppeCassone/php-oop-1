@@ -22,13 +22,16 @@ require 'db.php';
                 <?php 
                 foreach($movies as $movie) {
                     echo "
-                    <div class='card p-4'>
-                        <h4>TITOLO: " . $movie->title . "</h4> 
-                        <p><strong>ANNO: </strong>" . $movie->releaseDate . "</p> 
-                        <p><strong>PLOT: </strong>" . $movie->overview . "</p> 
-                        <p><strong>LINGUA ORIGINALE: </strong>" . $movie->getLanguage() . "</p>
-                        <p><strong>GENERI: </strong>" . $movie->getGenres() . "</p>
-                        <p><strong>REGIA: </strong>" . $movie->director->getDirector() . "</p>
+                    <div class='card p-0'>
+                        <img src=" . $movie->posterUrl . " class='card-img-top' alt=" . $movie->title . ">
+                        <div class='card-body p-4'>
+                            <h4>TITOLO: " . $movie->title . "</h4> 
+                            <p><strong>ANNO: </strong>" . $movie->releaseDate . "</p> 
+                            <p><strong>PLOT: </strong>" . $movie->overview . "</p> 
+                            <p><strong>LINGUA ORIGINALE: </strong>" . $movie->getLanguage() . "</p>
+                            <p><strong>GENERI: </strong>" . $movie->getGenres() . "</p>
+                            <p><strong>REGIA: </strong>" . $movie->director->getDirector() . "</p>
+                        </div>
                     </div>";
                 }
                 ?>       

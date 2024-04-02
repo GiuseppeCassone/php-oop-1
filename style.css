@@ -8,6 +8,10 @@ h1{
     font-size: 50px;
 }
 
+img{
+    height: 800px;
+}
+
 .row{
     width: 100%;
     gap: 20px;
