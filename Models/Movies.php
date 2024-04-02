@@ -6,9 +6,19 @@ class Movies {
     public $releaseDate;
     public $overview;
     public $originalLanguage;
+    public $genre;
+    public $director;
 
 
-    // funzione costruttore
+    // funzione costruttore    
+    /**
+     * __construct
+     *
+     * @param  string $_title
+     * @param  int $_releaseDate
+     * @param  string $_overview
+     * @param  string $_originalLanguage
+     */
     function __construct($_title, $_releaseDate, $_overview, $_originalLanguage) {
 
         // attributi della classe Movies
@@ -25,11 +35,6 @@ class Movies {
     
     
 }
-
-
-
-
-
 
 
 ?>

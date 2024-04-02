@@ -27,6 +27,7 @@ require 'db.php';
                         <p>" . $movie->releaseDate . "</p> 
                         <p>" . $movie->overview . "</p> 
                         <p>" . $movie->getLanguage() . "</p>
+                        <p>" . $movie->director->getDirector() . "</p>
                     </li>";
                 }
                 ?>
