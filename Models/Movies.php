@@ -20,7 +20,7 @@ class Movies {
      * @param  string $_originalLanguage
      * @param  string $_genre
      */
-    function __construct($_title, $_releaseDate, $_overview, $_originalLanguage, $_genre) {
+    function __construct($_title, $_releaseDate, $_overview, $_originalLanguage, $_genre = []) {
 
         // attributi della classe Movies
         $this->title = $_title;
